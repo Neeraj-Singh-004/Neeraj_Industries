@@ -1,0 +1,199 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #555;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #fff;
+    display: inline-block;
+    padding: 14px 20px;
+    text-decoration: none;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+h2 {
+    font-size: 24px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+h2:hover {
+    color: #167ee6;
+    font-size: 28px;
+}
+
+/* Footer */
+footer {
+    background-color: #190606;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 1s forwards;
+}
+
+/* Gallery */
+.gallery-item {
+    margin: 15px;
+    border: 2px solid #ddd;
+    overflow: hidden;
+    width: calc(25% - 30px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+    .gallery-item {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-item {
+        width: calc(100% - 30px);
+    }
+}
+
+/* Buttons */
+.insta-btn, .share-btn {
+    display: inline-block;
+    background-color: #E4405F;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.insta-btn:hover, .share-btn:hover {
+    background-color: #d63355;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Scroll-to-top Button */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #167ee6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.highlight {
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-clip: text;
+    color: transparent;
+    animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
